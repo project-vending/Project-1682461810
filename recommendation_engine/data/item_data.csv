@@ -1,0 +1,19 @@
+python
+import csv
+import os
+
+data_dir = "recommendation_engine/data"
+
+# Create user data CSV file
+user_data_path = os.path.join(data_dir, "user_data.csv")
+with open(user_data_path, "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["user_id", "item_id", "rating", "timestamp"])
+    # add more rows as needed
+
+# Create item data CSV file
+item_data_path = os.path.join(data_dir, "item_data.csv")
+with open(item_data_path, "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["item_id", "item_name", "category"])
+    # add more rows as needed
